@@ -1,0 +1,93 @@
+﻿@page
+@model All_About_Birds.Birds.IndexModel
+@{
+}
+<h2 class="my-3">List of Birds</h2>	
+
+<div class="row mb-3">
+	<div class="col">
+		<a class="btn btn-primary" href="/Birds/Create">New Bird</a>
+	</div>
+	<div class="col">
+		<form class="d-flex">
+			<input class="form-control me-2" type="search" name="search" value="@Model.search" placeholder="Search your favorite bird ">
+			<button class="btn btn-outline-success" type="submit">Search</button>
+		</form>
+	</div>
+
+</div>
+
+
+	
+	@* 	<div class="card">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="/images/birds/@item.ImageFileName" class="img-fluid">
+				</div>
+				<div class="col-md-8">
+					<h3 class="card-title">@item.BirdName</h3>
+					<p class="card-text">Scientific Name : @item.ScientificName</p>
+					<p class="card-text">Population: @item.Population</p>
+					<a class="btn btn-info" href="#">Details</a>
+				</div>
+			</div>
+		</div>
+	} *@
+
+@* 
+<div class="container text-center">
+	
+			<div class="row gy-3">
+
+		@foreach (var item in Model.listBirds)
+		{
+				<div class="col-sm">
+
+
+					<div class="card h-100">
+						<img src="/images/birds/@item.ImageFileName" class="card-img-top" height="200">
+						<div class="card-body">
+							<h5 class="card-title">@item.BirdName</h5>
+							<h6 class="card-title" style="text-indent">Scientific name : @item.ScientificName</h6>
+							<p class="card-text">Current Population : @item.Population</p>
+							<a href="#" class="btn btn-info">Learn More</a>
+							
+						</div>
+					</div>
+
+				</div>	
+		}
+			</div>
+		
+
+</div>
+	 *@
+
+
+<div class="container text-center mt-5">
+
+	<div class="row justify-content-around">
+
+		@foreach (var item in Model.listBirds)
+		{
+			<div class="col-md-4">
+
+
+				<div class="card h-100">
+					<img src="/images/birds/@item.ImageFileName" class="card-img-top" height="200">
+					<div class="card-body">
+						<h5 class="card-title">@item.BirdName</h5>
+						<h6 class="card-title" style="text-indent">Scientific name : @item.ScientificName</h6>
+						<p class="card-text">Current Population : @item.Population</p>
+						<a href="#" class="btn btn-info">Learn More</a>
+
+					</div>
+				</div>
+
+			</div>
+		}
+	</div>
+
+
+</div>
+
